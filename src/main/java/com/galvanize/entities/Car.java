@@ -44,6 +44,9 @@ public class Car {
     public Car() {
     }
 
+    public Car(String the_condor, String corvette, String s, Status available, String s1) {
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
