@@ -16,7 +16,7 @@ public class Driver {
     @Column(name = "nickname")
     String nickname;
     @Column(name = "car")
-    Object car;
+    String car;
     @Column(name = "records")
     String records;
     @Column(name = "wins")
@@ -27,7 +27,7 @@ public class Driver {
     public Driver() {
     }
 
-    public Driver(Long id, String firstName, String lastName, int age, String nickname, Car car, String records, int wins, int losses) {
+    public Driver(Long id, String firstName, String lastName, int age, String nickname,String car, String records, int wins, int losses) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -40,7 +40,7 @@ public class Driver {
     }
 
 
-    public Driver(String firstName, String lastName, int age, String nickname, Car car, String records, int wins, int losses) {
+    public Driver(String firstName, String lastName, int age, String nickname, String car, String records, int wins, int losses) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -49,6 +49,9 @@ public class Driver {
         this.records = records;
         this.wins = wins;
         this.losses = losses;
+    }
+
+    public Driver(long l, String asahi, String mojica, int i, String tato) {
     }
 
     public Long getId() {
@@ -95,7 +98,7 @@ public class Driver {
         return car;
     }
 
-    public void setCar(Car car) {
+    public void setCar(String car) {
         this.car = car;
     }
 
