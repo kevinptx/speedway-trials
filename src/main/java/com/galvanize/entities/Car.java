@@ -22,7 +22,7 @@ public class Car {
     @Column(name = "top_speed")
     int topSpeed;
 
-    public Car(Long id, String nickname, Enum model, String year, Object driver, Enum status, int topSpeed) {
+    public Car(Long id, String nickname, Enum model, String year, Driver driver, Enum status, int topSpeed) {
         this.id = id;
         this.nickname = nickname;
         this.model = model;

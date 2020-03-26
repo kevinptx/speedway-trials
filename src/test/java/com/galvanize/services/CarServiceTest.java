@@ -1,6 +1,8 @@
 package com.galvanize.services;
 
 import com.galvanize.entities.Car;
+import com.galvanize.entities.Driver;
+import com.galvanize.entities.Status;
 import com.galvanize.repositories.CarServiceRepoJao;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,16 +22,17 @@ public class CarServiceTest {
 
     @Autowired
     CarServiceRepoJao carServiceRepoJao;
-    @BeforeEach
-    void setUp(){
-        Car car = new Car();
-    }
-    
+
+    @Autowired
+    Driver driver;
+    Status status;
     @Test
     void createCarWithId() {
         //Setup
-    Car car = new Car("The Condor", "Corvette", "2019", Status.AVAILABLE, "200");
-    CarService carService = new CarService(carServiceRepoJao);
+        Car car = new Car("id", "nickname", "model", "year", new Driver(), "status", "topSpeed");
+        // Exercise
+        CarServiceRepoJao carServiceRepoJao;
+        //Assert
     assertNotNull(carService.createNewCar("The Condor", "Corvette", "2019", Status.AVAILABLE, "200").getId());
     }
 }
