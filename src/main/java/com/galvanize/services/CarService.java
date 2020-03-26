@@ -1,7 +1,6 @@
 package com.galvanize.services;
 
 import com.galvanize.entities.Car;
-import com.galvanize.entities.Driver;
 import com.galvanize.repositories.CarServiceRepoJao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
