@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/cars")
 public class CarController {
+
     @GetMapping("/")
     public String getCars(){
         return "Hello Car.";
     }
 }
-
-/// You go this message pa;lsdjfnaposjfpaosdjfpoasujpoausdjf
